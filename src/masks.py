@@ -1,6 +1,6 @@
 def get_mask_card_number(number_card: str) -> str:
     """
-    Функция  принимает на вход номер карты в виде числа и возвращает маску номера по правилу
+    Функция принимает на вход номер карты в виде числа и возвращает маску номера по правилу
     XXXX XX** **** XXXX
     """
 
@@ -12,15 +12,9 @@ def get_mask_card_number(number_card: str) -> str:
         return "Не корректный номер карты !"
 
 
-print(get_mask_card_number(input("Введите номер карты")))
-
-
 def get_mask_account(number_account: str) -> str:
     """
     Функция принимает на вход номер счета в виде числа и возвращает маску номера по правилу **XXXX
     """
     number_account_output = str("**" + number_account[-4:])
     return number_account_output
-
-
-print(get_mask_account((input("Введите номер счета"))))
