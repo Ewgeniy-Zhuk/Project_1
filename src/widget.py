@@ -1,4 +1,5 @@
-import masks
+from src.masks import get_mask_account
+from src.masks import get_mask_card_number
 
 
 def mask_account_card(meaning: str) -> str:
@@ -13,9 +14,9 @@ def mask_account_card(meaning: str) -> str:
         else:
             letters += symbol
     if letters == "Счет ":
-        return f"{letters}{masks.get_mask_account(numbers)}"
+        return f"{letters}{get_mask_account(numbers)}"
     else:
-        return f"{letters}{masks.get_mask_card_number(numbers)}"
+        return f"{letters}{get_mask_card_number(numbers)}"
 
 
 print(mask_account_card(input("Введите карту или счет")))
